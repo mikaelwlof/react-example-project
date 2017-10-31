@@ -1,15 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Game from './components/Game.jsx';
+import Game from './game/Game.jsx';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import sausageApp from './combinedReducers.js'
 
-class App extends React.Component {
-
-  render() {
-    return (
-      <Game />
-    );
-  }
-}
-
+let store = createStore(sausageApp);
 render(
-  <App/>, document.getElementById('app'));
+  <Provider store={store}>
+    <Game />
+  </Provider>,
+  document.getElementById('app')
+)

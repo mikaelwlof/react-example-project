@@ -1,0 +1,6 @@
+.sausage {
+  height: 50px;
+  margin-bottom: 20px;
+  background-image: url('./sausage.png');
+  background-size: cover;
+}

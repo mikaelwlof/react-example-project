@@ -16,13 +16,15 @@ class SausageComponent extends React.Component {
   }
 
   handleClick(event) {
-    this.props.onClick(event);
+    this.props.onClick(event.nativeEvent.offsetX);
   }
 
   render() {
     return (
       <div>
-        <div ref={div => this.divElement = div} className={styles.sausage} style={{width: this.getSausageWidth()}} onClick={(event) => this.handleClick(event)}> </div>
+        <div className={styles.sausage} style={{width: this.getSausageWidth()}} onClick={(event) => this.handleClick(event)}>
+
+        </div>
 
         <div className={styles.sausage} style={{width: this.getCurrentPieceWidth()}}></div>
       </div>

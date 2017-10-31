@@ -27,6 +27,13 @@ var config = {
         }
       },
       {
+        test: /\.(png|jpg|gif)$/,
+        loader: "file-loader",
+        options: {
+          name: '[path][name].[ext]'
+        }
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader'
       },
