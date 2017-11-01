@@ -12,8 +12,10 @@ var config = {
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
+      historyApiFallback: true,
       contentBase: './src/client/',
-      hot: true
+      hot: true,
+      host: 'my.env'
   },
   module : {
     loaders : [

@@ -3,12 +3,16 @@ import {render} from 'react-dom';
 import Game from './game/Game.jsx';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import sausageApp from './combinedReducers.js'
+import configureStore from './configureStore.js'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App.js'
 
-let store = createStore(sausageApp);
+const store = configureStore();
 render(
-  <Provider store={store}>
-    <Game />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('app')
 )
