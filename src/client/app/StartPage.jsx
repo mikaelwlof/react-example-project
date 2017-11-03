@@ -9,11 +9,10 @@ class StartPage extends React.Component {
   render() {
     return (
       <div>
-        Start Page
+        Start Page3
       </div>
     );
   }
-
 }
 
 export default StartPage;

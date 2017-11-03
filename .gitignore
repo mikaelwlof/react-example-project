@@ -2,3 +2,4 @@
 node_modules
 reactNativeTestProject/android
 reactNativeTestProject/ios
+package-lock.json
