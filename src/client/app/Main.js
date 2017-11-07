@@ -1,8 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import StartPage from './StartPage.jsx'
-import Game from './game/Game.jsx'
-import ApiCallPage from './apiCall/ApiCallPage.jsx'
+import StartPage from './startPage/startPage.js'
+import Game from './game/game.js'
+import ApiCallPage from './apiCall/apiCallPage.js'
 
 const Main = () => (
   <main>

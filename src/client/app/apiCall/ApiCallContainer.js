@@ -1,6 +1,6 @@
 import ApiCallComponent from './ApiCallComponent.jsx'
 import { connect } from 'react-redux'
-import { fetchApiData } from '../actions.js'
+import { fetchApiData } from './apiCallActions.js'
 
 const mapDispatchToProps = dispatch => {
   return {
