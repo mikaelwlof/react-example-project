@@ -1,37 +1,29 @@
 import React from 'react';
 
-class ResultBoardComponent extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  getWinner () {
-    if(this.props.userPoints >= 3) {
+const ResultBoardComponent = (props) => {
+  const getWinner = () => {
+    if(props.userPoints >= 3) {
       return 'USER';
     }
-    if(this.props.computerPoints >= 3) {
+    if(props.computerPoints >= 3) {
       return 'COMPUTER';
     }
     return 'none';
-  }
+  };
 
-  render() {
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          Your points: {this.props.userPoints}
-        </div>
-        <div>
-          Computer points: {this.props.computerPoints}
-        </div>
-        <div>
-          Winner is: {this.getWinner()}
-        </div>
+        Your points: {props.userPoints}
       </div>
-    );
-  }
-
+      <div>
+        Computer points: {props.computerPoints}
+      </div>
+      <div>
+        Winner is: {getWinner}
+      </div>
+    </div>
+  );
 }
 
 export default ResultBoardComponent;
